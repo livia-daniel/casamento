@@ -412,8 +412,9 @@ textarea{
         font-size:40px;
     }
 
-    .countdown h2{
-    font-size:34px;
+  .countdown h2{
+    font-size:22px;
+    white-space:nowrap;
 }
 
 .cerimony h2,
@@ -424,7 +425,7 @@ textarea{
 }
 
     .counter-box span{
-        font-size:38px;
+        font-size:32px;
     }
 
     .counter-box p{
@@ -432,19 +433,16 @@ textarea{
     letter-spacing:1px;
 }
 
-    #countdown-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+  #countdown-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+    gap:8px;
 }
 
 .counter-box{
-    min-width:auto;
-}
-
-    .hero{
-        padding-top:140px;
-    }
+    flex:1;
+    min-width:0;
 }
 
 input[type=number]::-webkit-inner-spin-button,
