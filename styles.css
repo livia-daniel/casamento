@@ -424,6 +424,16 @@ textarea{
         font-size:50px;
     }
 
+    #countdown-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.counter-box{
+    min-width:auto;
+}
+
     .hero{
         padding-top:140px;
     }
