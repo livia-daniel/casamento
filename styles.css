@@ -412,17 +412,25 @@ textarea{
         font-size:40px;
     }
 
-    .countdown h2,
-    .cerimony h2,
-    .event-info h2,
-    .location-section h2,
-    .rsvp h2{
-        font-size:48px;
-    }
+    .countdown h2{
+    font-size:34px;
+}
+
+.cerimony h2,
+.event-info h2,
+.location-section h2,
+.rsvp h2{
+    font-size:48px;
+}
 
     .counter-box span{
-        font-size:50px;
+        font-size:38px;
     }
+
+    .counter-box p{
+    font-size:11px;
+    letter-spacing:1px;
+}
 
     #countdown-container{
     display:grid;
