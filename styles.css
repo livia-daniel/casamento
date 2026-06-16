@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Inter:wght@300;400&display=swap');
+
+:root{
+    --bg:#f4ece6;
+    --text:#9b7653;
+    --gold:#b07a45;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:120px;
+}
+
+body{
+    background:
+    linear-gradient(
+        180deg,
+        #f8f1eb 0%,
+        #f4ece6 50%,
+        #f8f1eb 100%
+    );
+
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+    line-height:1.8;
+}
+
+/* MENU */
+
+nav{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    background:rgba(248,241,235,.95);
+    backdrop-filter:blur(10px);
+    z-index:999;
+    padding:25px 40px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:flex-end;
+    gap:40px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--gold);
+    font-size:14px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* HERO */
+
+.hero{
+    min-height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 30px 40px;
+    position:relative;
+    overflow:visible;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+
+    top:-100px;
+    right:-100px;
+
+    width:650px;
+    height:650px;
+
+    background:url('images/flores.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+
+    opacity:.55;
+    pointer-events:none;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+
+    bottom:-150px;
+    left:-150px;
+
+    width:500px;
+    height:500px;
+
+    background:url('images/flores.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+
+    transform:rotate(180deg);
+
+    opacity:.25;
+    pointer-events:none;
+}
+
+.hero-content{
+    max-width:900px;
+    position:relative;
+    z-index:2;
+}
+
+.small-title{
+    text-transform:uppercase;
+    letter-spacing:8px;
+    font-size:24px;
+    font-weight:300;
+    margin-top:40px;
+    margin-bottom:55px;
+    color:var(--gold);
+}
+
+h1{
+    font-family:'Bodoni Moda',serif;
+    font-size:130px;
+    font-weight:400;
+    line-height:1.15;
+}
+
+.and{
+    font-family:'Bodoni Moda',serif;
+    font-size:55px;
+    color:var(--gold);
+    margin:15px 0;
+}
+
+.date{
+    margin-top:60px;
+    font-size:24px;
+}
+
+.location{
+    margin-top:10px;
+}
+
+.quote{
+    margin-top:35px;
+    font-style:italic;
+    font-size:20px;
+}
+
+.hero-buttons{
+    margin-top:50px;
+}
+
+.hero-buttons a{
+    display:inline-block;
+    padding:18px 42px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    text-decoration:none;
+    margin:10px;
+    transition:.3s;
+}
+
+.hero-buttons a:hover{
+    background:var(--gold);
+    color:white;
+}
+
+/* CONTAGEM */
+
+.countdown{
+    text-align:center;
+    padding:0 20px 70px;
+}
+
+.countdown h2{
+    font-family:'Bodoni Moda',serif;
+    font-size:52px;
+    font-weight:400;
+    color:var(--gold);
+    margin-bottom:35px;
+}
+
+#countdown-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.counter-box{
+    min-width:120px;
+}
+
+.counter-box span{
+    display:block;
+    font-size:70px;
+    color:var(--gold);
+    font-family:'Bodoni Moda',serif;
+}
+
+.counter-box p{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+}
+
+/* FOTOS */
+
+.photo-section{
+    padding:20px 20px;
+    text-align:center;
+}
+
+.foto-praia,
+.foto-montanha{
+    width:100%;
+    max-width:800px;
+    display:block;
+    margin:auto;
+    border-radius:12px;
+}
+
+.caption{
+    margin-top:25px;
+    font-style:italic;
+    font-size:18px;
+}
+
+/* SEÇÕES */
+
+.cerimony,
+.event-info,
+.location-section,
+.rsvp{
+    max-width:900px;
+    margin:auto;
+    padding:40px 30px;
+    text-align:center;
+}
+
+.cerimony h2,
+.event-info h2,
+.location-section h2,
+.rsvp h2{
+    font-family:'Bodoni Moda',serif;
+    font-size:70px;
+    font-weight:400;
+    color:var(--gold);
+    margin-bottom:35px;
+}
+
+.cerimony p,
+.event-info p,
+.location-section p{
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+/* GRID */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+/* MAPA */
+
+iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:15px;
+    margin-top:25px;
+}
+
+.map-buttons{
+    margin-top:30px;
+}
+
+.map-buttons a{
+    display:inline-block;
+    padding:15px 35px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    text-decoration:none;
+    margin:10px;
+    transition:.3s;
+}
+
+.map-buttons a:hover{
+    background:var(--gold);
+    color:white;
+}
+
+/* RSVP */
+
+.deadline{
+    margin-bottom:30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input,
+select,
+textarea{
+    padding:18px;
+    border:1px solid #dcc7b6;
+    background:white;
+    font-size:16px;
+    font-family:'inter',sans-serif:
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:var(--gold);
+}
+
+button{
+    padding:20px;
+    background:var(--gold);
+    color:white;
+    border:none;
+    font-size:15px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+button:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+#mensagem-rsvp{
+    margin-top:20px;
+    padding:15px;
+    border-radius:8px;
+    display:none;
+    font-weight:500;
+}
+
+#mensagem-rsvp.sucesso{
+    background:#f3f8f3;
+    color:#3c5f3c;
+    border:1px solid #d7e6d7;
+}
+
+#mensagem-rsvp.erro{
+    background:#fff3f3;
+    color:#8a3b3b;
+    border:1px solid #f0caca;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:100px 20px;
+}
+
+footer h2{
+    font-family:'Bodoni Moda',serif;
+    font-size:80px;
+    font-weight:400;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+textarea{
+    height:90px;
+    min-height:90px;
+    resize:vertical;
+    font-family:'inter',sans-serif;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav ul{
+        gap:15px;
+    }
+
+    h1{
+        font-size:70px;
+    }
+
+    .and{
+        font-size:40px;
+    }
+
+    .countdown h2,
+    .cerimony h2,
+    .event-info h2,
+    .location-section h2,
+    .rsvp h2{
+        font-size:48px;
+    }
+
+    .counter-box span{
+        font-size:50px;
+    }
+
+    .hero{
+        padding-top:140px;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+
+input[type=number]{
+    -moz-appearance:textfield;
+}
